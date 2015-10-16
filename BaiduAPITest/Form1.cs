@@ -85,8 +85,10 @@ namespace BaiduAPITest
             try
             {
                 HttpClient httpClient = new HttpClient();
-                httpClient.DefaultRequestHeaders.TryAddWithoutValidation("apikey", "YOUR KEY HERE");
 
+               //Enter your API key here (If you have problems signing up at BaiDu, email blog@a9t9.com)
+               httpClient.DefaultRequestHeaders.TryAddWithoutValidation("apikey", "YOUR KEY HERE");
+       
                 MultipartFormDataContent form = new MultipartFormDataContent();
                 form.Add(new StringContent("pc"), "fromdevice");
                 form.Add(new StringContent("10.10.10.0"), "clientip");
